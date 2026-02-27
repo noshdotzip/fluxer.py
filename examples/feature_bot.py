@@ -8,12 +8,27 @@ import fluxer
 from fluxer.ext import commands, tasks
 
 
-TOKEN = os.getenv("FLUXER_TOKEN", "YOUR_TOKEN")
-OWNER_IDS = {
-    item.strip()
-    for item in os.getenv("FLUXER_OWNER_IDS", "").split(",")
-    if item.strip()
-}
+def _load_env(path: str = ".env") -> dict[str, str]:
+    if not os.path.exists(path):
+        return {}
+    env: dict[str, str] = {}
+    with open(path, "r", encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip("'").strip('"')
+            env[key] = value
+    return env
+
+
+ENV = _load_env()
+TOKEN = ENV.get("FLUXER_TOKEN", "YOUR_TOKEN")
+OWNER_IDS = {item.strip() for item in ENV.get("FLUXER_OWNER_IDS", "").split(",") if item.strip()}
 
 bot = commands.Bot(
     command_prefix=commands.when_mentioned_or("!"),
