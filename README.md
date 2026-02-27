@@ -95,4 +95,4 @@ See `CONTRIBUTING.md`.
 
 ## License
 
-License not yet defined. If you intend to publish, add a license file and metadata.
+MIT License. See `LICENSE`.
