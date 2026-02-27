@@ -5,6 +5,9 @@ import os
 from pathlib import Path
 from typing import Any
 
+import logging
+import sys
+
 import fluxer
 from fluxer.ext import commands, tasks
 
@@ -28,9 +31,17 @@ def _load_env(path: str) -> dict[str, str]:
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ENV = _load_env(str(ROOT / ".env"))
+ENV_PATH = ROOT / ".env"
+ENV = _load_env(str(ENV_PATH))
 TOKEN = ENV.get("FLUXER_TOKEN", "YOUR_TOKEN")
 OWNER_IDS = {item.strip() for item in ENV.get("FLUXER_OWNER_IDS", "").split(",") if item.strip()}
+
+logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(name)s: %(message)s")
+LOGGER = logging.getLogger("feature_bot")
+
+if not TOKEN or TOKEN == "YOUR_TOKEN":
+    LOGGER.error("FLUXER_TOKEN missing. Add it to %s", ENV_PATH)
+    sys.exit(1)
 
 bot = commands.Bot(
     command_prefix=commands.when_mentioned_or("!"),

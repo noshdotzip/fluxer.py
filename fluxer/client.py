@@ -7,7 +7,7 @@ from typing import Any, Awaitable, Callable, Dict, Optional
 
 from .api import API
 from .allowed_mentions import AllowedMentions
-from .errors import FluxerError
+from .errors import FluxerError, HTTPException, LoginFailure
 from .gateway import Gateway
 from .http import RESTClient
 from .intents import Intents
@@ -430,12 +430,26 @@ class Client:
         if not self.token:
             raise FluxerError("Token is required to start the client")
 
+        # Accept tokens with common prefixes.
+        lowered = self.token.lower()
+        if lowered.startswith("bot "):
+            self.token = self.token[4:]
+            self.http.set_token(self.token)
+        elif lowered.startswith("bearer "):
+            self.token = self.token[7:]
+            self.http.set_token(self.token)
+
         LOGGER.info("Starting Fluxer client")
         await self.http.start()
         try:
             await self.gateway.connect()
         except asyncio.CancelledError:
             await self.close()
+            raise
+        except HTTPException as exc:
+            await self.close()
+            if exc.status in (401, 403):
+                raise LoginFailure("Invalid token") from exc
             raise
         except Exception:
             await self.close()

@@ -32,10 +32,13 @@ class Gateway:
         self._ws = await self._client.http.session.ws_connect(url)
         self._listener_task = asyncio.create_task(self._listen())
         try:
-            await self._ready.wait()
+            await asyncio.wait_for(self._ready.wait(), timeout=self._heartbeat_timeout)
         except asyncio.CancelledError:
             await self.close()
             raise
+        except asyncio.TimeoutError as exc:
+            await self.close()
+            raise GatewayError("Timed out waiting for READY") from exc
 
     async def close(self) -> None:
         if self._listener_task:
