@@ -1208,8 +1208,15 @@ class HelpCommand:
                 if cmd.hidden:
                     continue
                 qualified = " ".join(chain + [cmd.name])
+                signature = cmd.signature
                 summary = cmd.brief or cmd.help or ""
-                lines.append(f"{'  ' * indent}{prefix}{qualified} {summary}".rstrip())
+                usage = f"{prefix}{qualified}"
+                if signature:
+                    usage = f"{usage} {signature}"
+                line = f"{'  ' * indent}{usage}"
+                if summary:
+                    line = f"{line} - {summary}"
+                lines.append(line.rstrip())
                 if isinstance(cmd, Group):
                     walk(cmd, indent + 1, chain + [cmd.name])
 
@@ -1236,7 +1243,7 @@ class HelpCommand:
                 lines.append("Subcommands: " + ", ".join(unique))
         await self.context.send("\n".join(lines))
 
-    async def command_callback(self, ctx: Context, *, command: Optional[str] = None) -> None:
+    async def command_callback(self, ctx: Context, command: Optional[str] = None) -> None:
         await self.prepare_help_command(ctx, command)
         if command is None:
             await self.send_bot_help(ctx.bot.commands)
@@ -1299,7 +1306,12 @@ class Bot(Client, GroupMixin):
 
     def _add_help_command(self, help_command: HelpCommand) -> None:
         help_command = help_command.copy()
-        command = Command(help_command.command_callback, name="help", help="Show help")
+        command = Command(
+            help_command.command_callback,
+            name="help",
+            aliases=["commands"],
+            help="Show help",
+        )
         self.add_command(command)
 
     def before_invoke(self, coro: Callable[[Context], Awaitable[None]]):

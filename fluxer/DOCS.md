@@ -96,6 +96,8 @@ A default `help` command is installed. It displays nested groups with indentatio
 
 You can override it by passing a custom `HelpCommand` to `Bot(help_command=...)`.
 
+`help` also has an alias: `commands`.
+
 ## Checks and Permissions
 
 ### Built-in Checks
