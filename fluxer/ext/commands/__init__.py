@@ -1223,11 +1223,33 @@ class HelpCommand:
         walk(mixin, 0, [])
         return lines
 
+    async def _send_lines(self, lines: List[str]) -> None:
+        if not self.context:
+            return
+        if not lines:
+            await self.context.send("No commands available.")
+            return
+        chunks: List[str] = []
+        current = ""
+        for line in lines:
+            if not current:
+                current = line
+                continue
+            if len(current) + len(line) + 1 > 1900:
+                chunks.append(current)
+                current = line
+            else:
+                current = f"{current}\n{line}"
+        if current:
+            chunks.append(current)
+        for chunk in chunks:
+            await self.context.send(chunk)
+
     async def send_bot_help(self, mapping: Dict[str, Command]) -> None:
         if not self.context:
             return
         lines = self._format_commands(self.context.bot)
-        await self.context.send("\n".join(lines))
+        await self._send_lines(lines)
 
     async def send_command_help(self, command: Command) -> None:
         if not self.context:
@@ -1241,7 +1263,7 @@ class HelpCommand:
                 subcommands = [cmd.name for cmd in command.commands.values()]
                 unique = sorted(set(subcommands))
                 lines.append("Subcommands: " + ", ".join(unique))
-        await self.context.send("\n".join(lines))
+        await self._send_lines(lines)
 
     async def command_callback(self, ctx: Context, command: Optional[str] = None) -> None:
         await self.prepare_help_command(ctx, command)
