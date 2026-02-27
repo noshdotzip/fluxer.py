@@ -23,6 +23,7 @@ class Gateway:
         self._sequence: Optional[int] = None
         self._session_id: Optional[str] = None
         self._ready = asyncio.Event()
+        self._closed = asyncio.Event()
 
     async def connect(self) -> None:
         gateway_info = await self._client.http.get_gateway_bot()
@@ -61,6 +62,10 @@ class Gateway:
             self._heartbeat_task.cancel()
         if self._ws:
             await self._ws.close()
+        self._closed.set()
+
+    async def wait_closed(self) -> None:
+        await self._closed.wait()
 
     async def _identify(self) -> None:
         payload = {
@@ -88,30 +93,36 @@ class Gateway:
 
     async def _listen(self) -> None:
         assert self._ws is not None
-        async for msg in self._ws:
-            if msg.type == aiohttp.WSMsgType.TEXT:
-                payload = json.loads(msg.data)
-                await self._handle_payload(payload)
-            elif msg.type == aiohttp.WSMsgType.BINARY:
-                data = msg.data
-                try:
-                    text = data.decode("utf-8")
-                except UnicodeDecodeError:
+        try:
+            async for msg in self._ws:
+                if msg.type == aiohttp.WSMsgType.TEXT:
+                    payload = json.loads(msg.data)
+                    await self._handle_payload(payload)
+                elif msg.type == aiohttp.WSMsgType.BINARY:
+                    data = msg.data
                     try:
-                        text = zlib.decompress(data).decode("utf-8")
-                    except Exception as exc:
-                        raise GatewayError("Gateway binary payload decode failed") from exc
-                payload = json.loads(text)
-                await self._handle_payload(payload)
-            elif msg.type in (aiohttp.WSMsgType.CLOSE, aiohttp.WSMsgType.CLOSED):
-                code = self._ws.close_code if self._ws else None
-                raise GatewayError(f"Gateway websocket closed (code={code})")
-            elif msg.type == aiohttp.WSMsgType.ERROR:
-                raise GatewayError("Gateway websocket error")
+                        text = data.decode("utf-8")
+                    except UnicodeDecodeError:
+                        try:
+                            text = zlib.decompress(data).decode("utf-8")
+                        except Exception as exc:
+                            raise GatewayError("Gateway binary payload decode failed") from exc
+                    payload = json.loads(text)
+                    await self._handle_payload(payload)
+                elif msg.type in (aiohttp.WSMsgType.CLOSE, aiohttp.WSMsgType.CLOSED):
+                    raise GatewayError("Gateway websocket closed")
+                elif msg.type == aiohttp.WSMsgType.ERROR:
+                    raise GatewayError("Gateway websocket error")
 
-        if self._ws and self._ws.closed:
-            code = self._ws.close_code
-            raise GatewayError(f"Gateway websocket closed (code={code})")
+            if self._ws and self._ws.closed:
+                code = self._ws.close_code
+                raise GatewayError(f"Gateway websocket closed (code={code})")
+        except asyncio.CancelledError:
+            return
+        except Exception as exc:
+            LOGGER.warning("Gateway listener stopped: %s", exc)
+        finally:
+            self._closed.set()
 
     async def _handle_payload(self, payload: Dict[str, Any]) -> None:
         op = payload.get("op")

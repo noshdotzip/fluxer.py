@@ -447,6 +447,7 @@ class Client:
         await self.http.start()
         try:
             await self.gateway.connect()
+            await self.gateway.wait_closed()
         except asyncio.CancelledError:
             await self.close()
             raise
