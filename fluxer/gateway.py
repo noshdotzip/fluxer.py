@@ -1,6 +1,8 @@
 ﻿import asyncio
 import json
 import logging
+import zlib
+from urllib.parse import urlencode, urlparse, parse_qsl, urlunparse
 from typing import Any, Dict, Optional
 
 import aiohttp
@@ -28,17 +30,29 @@ class Gateway:
         if not url:
             raise GatewayError("Gateway URL missing from /gateway/bot response")
 
+        url = self._normalize_gateway_url(url)
         LOGGER.info("Connecting to gateway %s", url)
         self._ws = await self._client.http.session.ws_connect(url)
         self._listener_task = asyncio.create_task(self._listen())
+        ready_task = asyncio.create_task(self._ready.wait())
         try:
-            await asyncio.wait_for(self._ready.wait(), timeout=self._heartbeat_timeout)
+            done, pending = await asyncio.wait(
+                [ready_task, self._listener_task],
+                timeout=self._heartbeat_timeout,
+                return_when=asyncio.FIRST_COMPLETED,
+            )
+            if ready_task in done and self._ready.is_set():
+                return
+            if self._listener_task in done:
+                exc = self._listener_task.exception()
+                raise GatewayError("Gateway closed before READY") from exc
+            raise GatewayError("Timed out waiting for READY")
         except asyncio.CancelledError:
             await self.close()
             raise
-        except asyncio.TimeoutError as exc:
-            await self.close()
-            raise GatewayError("Timed out waiting for READY") from exc
+        finally:
+            if not ready_task.done():
+                ready_task.cancel()
 
     async def close(self) -> None:
         if self._listener_task:
@@ -61,6 +75,7 @@ class Gateway:
                 },
             },
         }
+        LOGGER.info("Identifying with gateway")
         await self._send(payload)
 
     async def _heartbeat_loop(self, interval_ms: int) -> None:
@@ -77,8 +92,26 @@ class Gateway:
             if msg.type == aiohttp.WSMsgType.TEXT:
                 payload = json.loads(msg.data)
                 await self._handle_payload(payload)
+            elif msg.type == aiohttp.WSMsgType.BINARY:
+                data = msg.data
+                try:
+                    text = data.decode("utf-8")
+                except UnicodeDecodeError:
+                    try:
+                        text = zlib.decompress(data).decode("utf-8")
+                    except Exception as exc:
+                        raise GatewayError("Gateway binary payload decode failed") from exc
+                payload = json.loads(text)
+                await self._handle_payload(payload)
+            elif msg.type in (aiohttp.WSMsgType.CLOSE, aiohttp.WSMsgType.CLOSED):
+                code = self._ws.close_code if self._ws else None
+                raise GatewayError(f"Gateway websocket closed (code={code})")
             elif msg.type == aiohttp.WSMsgType.ERROR:
                 raise GatewayError("Gateway websocket error")
+
+        if self._ws and self._ws.closed:
+            code = self._ws.close_code
+            raise GatewayError(f"Gateway websocket closed (code={code})")
 
     async def _handle_payload(self, payload: Dict[str, Any]) -> None:
         op = payload.get("op")
@@ -94,6 +127,7 @@ class Gateway:
             if self._heartbeat_task:
                 self._heartbeat_task.cancel()
             self._heartbeat_task = asyncio.create_task(self._heartbeat_loop(interval_ms))
+            LOGGER.info("Gateway HELLO (heartbeat=%sms)", interval_ms)
             await self._identify()
         elif op == 11:  # HEARTBEAT_ACK
             return
@@ -125,3 +159,14 @@ class Gateway:
     async def _send(self, payload: Dict[str, Any]) -> None:
         assert self._ws is not None
         await self._ws.send_str(json.dumps(payload))
+
+    @staticmethod
+    def _normalize_gateway_url(url: str) -> str:
+        parsed = urlparse(url)
+        query = dict(parse_qsl(parsed.query))
+        if "encoding" not in query:
+            query["encoding"] = "json"
+        if "v" not in query:
+            query["v"] = "1"
+        new_query = urlencode(query)
+        return urlunparse(parsed._replace(query=new_query))

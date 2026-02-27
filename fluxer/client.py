@@ -176,8 +176,9 @@ class Client:
         if handler:
             await handler(event_name, data)
 
-        snake_event = event_name.lower()
-        await self._dispatch(f"on_{snake_event}", data)
+        if event_name not in {"READY", "RESUMED"}:
+            snake_event = event_name.lower()
+            await self._dispatch(f"on_{snake_event}", data)
         await self._dispatch("on_raw_event", event_name, data)
 
     async def _handle_ready(self, _: str, data: Any) -> None:
@@ -349,7 +350,10 @@ class Client:
                     self._waiters.pop(name, None)
         handler = self._listeners.get(name)
         if handler:
-            await handler(*args)
+            try:
+                await handler(*args)
+            except Exception as exc:
+                LOGGER.exception("Error in event handler %s: %s", name, exc)
 
     async def wait_for(
         self,
