@@ -427,10 +427,23 @@ class Client:
             raise FluxerError("Token is required to start the client")
 
         await self.http.start()
-        await self.gateway.connect()
+        try:
+            await self.gateway.connect()
+        except asyncio.CancelledError:
+            await self.close()
+            raise
+        except Exception:
+            await self.close()
+            raise
 
     def run(self, token: Optional[str] = None) -> None:
-        asyncio.run(self.start(token))
+        try:
+            asyncio.run(self.start(token))
+        except KeyboardInterrupt:
+            try:
+                asyncio.run(self.close())
+            except Exception:
+                pass
 
     async def close(self) -> None:
         await self.gateway.close()

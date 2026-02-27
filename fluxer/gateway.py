@@ -26,7 +26,11 @@ class Gateway:
 
         self._ws = await self._client.http.session.ws_connect(url)
         self._listener_task = asyncio.create_task(self._listen())
-        await self._ready.wait()
+        try:
+            await self._ready.wait()
+        except asyncio.CancelledError:
+            await self.close()
+            raise
 
     async def close(self) -> None:
         if self._listener_task:

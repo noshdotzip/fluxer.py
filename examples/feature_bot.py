@@ -2,13 +2,14 @@
 import io
 import json
 import os
+from pathlib import Path
 from typing import Any
 
 import fluxer
 from fluxer.ext import commands, tasks
 
 
-def _load_env(path: str = ".env") -> dict[str, str]:
+def _load_env(path: str) -> dict[str, str]:
     if not os.path.exists(path):
         return {}
     env: dict[str, str] = {}
@@ -26,7 +27,8 @@ def _load_env(path: str = ".env") -> dict[str, str]:
     return env
 
 
-ENV = _load_env()
+ROOT = Path(__file__).resolve().parents[1]
+ENV = _load_env(str(ROOT / ".env"))
 TOKEN = ENV.get("FLUXER_TOKEN", "YOUR_TOKEN")
 OWNER_IDS = {item.strip() for item in ENV.get("FLUXER_OWNER_IDS", "").split(",") if item.strip()}
 
