@@ -1,0 +1,21 @@
+﻿[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fluxer-py"
+version = "0.1.0"
+description = "discord.py-compatible shim for the Fluxer API"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "aiohttp>=3.8",
+]
+
+[project.optional-dependencies]
+dev = [
+  "requests>=2.31",
+]
+
+[tool.setuptools.packages.find]
+include = ["fluxer*"]

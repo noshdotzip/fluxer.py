@@ -1,0 +1,2612 @@
+{
+  "groups": {
+    "admin": {
+      "add_email_ban": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/add-email-ban",
+        "method": "POST",
+        "path": "/admin/bans/email/add"
+      },
+      "add_ip_ban": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/add-ip-ban",
+        "method": "POST",
+        "path": "/admin/bans/ip/add"
+      },
+      "add_phone_ban": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/add-phone-ban",
+        "method": "POST",
+        "path": "/admin/bans/phone/add"
+      },
+      "add_snowflake_reservation": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/add-snowflake-reservation",
+        "method": "POST",
+        "path": "/admin/snowflake-reservations/add"
+      },
+      "approve_discovery_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/approve-discovery-application",
+        "method": "POST",
+        "path": "/admin/discovery/applications/{guild_id}/approve"
+      },
+      "approve_system_dm_job": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/approve-system-dm-job",
+        "method": "POST",
+        "path": "/admin/system-dm-jobs/{job_id}/approve"
+      },
+      "ban_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/ban-guild-member",
+        "method": "POST",
+        "path": "/admin/guilds/ban-member"
+      },
+      "bulk_add_guild_members": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/bulk-add-guild-members",
+        "method": "POST",
+        "path": "/admin/bulk/add-guild-members"
+      },
+      "bulk_update_guild_features": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/bulk-update-guild-features",
+        "method": "POST",
+        "path": "/admin/bulk/update-guild-features"
+      },
+      "bulk_update_user_flags": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/bulk-update-user-flags",
+        "method": "POST",
+        "path": "/admin/bulk/update-user-flags"
+      },
+      "cancel_account_deletion": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/cancel-account-deletion",
+        "method": "POST",
+        "path": "/admin/users/cancel-deletion"
+      },
+      "cancel_bulk_message_deletion": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/cancel-bulk-message-deletion",
+        "method": "POST",
+        "path": "/admin/users/cancel-bulk-message-deletion"
+      },
+      "change_user_dob": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/change-user-dob",
+        "method": "POST",
+        "path": "/admin/users/change-dob"
+      },
+      "change_user_email": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/change-user-email",
+        "method": "POST",
+        "path": "/admin/users/change-email"
+      },
+      "change_user_username": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/change-user-username",
+        "method": "POST",
+        "path": "/admin/users/change-username"
+      },
+      "check_email_ban_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/check-email-ban-status",
+        "method": "POST",
+        "path": "/admin/bans/email/check"
+      },
+      "check_ip_ban_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/check-ip-ban-status",
+        "method": "POST",
+        "path": "/admin/bans/ip/check"
+      },
+      "check_phone_ban_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/check-phone-ban-status",
+        "method": "POST",
+        "path": "/admin/bans/phone/check"
+      },
+      "clear_guild_fields": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/clear-guild-fields",
+        "method": "POST",
+        "path": "/admin/guilds/clear-fields"
+      },
+      "clear_user_fields": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/clear-user-fields",
+        "method": "POST",
+        "path": "/admin/users/clear-fields"
+      },
+      "create_admin_api_key": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/create-admin-api-key",
+        "method": "POST",
+        "path": "/admin/api-keys"
+      },
+      "create_system_dm_job": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/create-system-dm-job",
+        "method": "POST",
+        "path": "/admin/system-dm-jobs"
+      },
+      "create_voice_region": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/create-voice-region",
+        "method": "POST",
+        "path": "/admin/voice/regions/create"
+      },
+      "create_voice_server": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/create-voice-server",
+        "method": "POST",
+        "path": "/admin/voice/servers/create"
+      },
+      "delete_admin_api_key": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/delete-admin-api-key",
+        "method": "DELETE",
+        "path": "/admin/api-keys/{keyId}"
+      },
+      "delete_all_user_messages": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/delete-all-user-messages",
+        "method": "POST",
+        "path": "/admin/messages/delete-all"
+      },
+      "delete_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/delete-guild",
+        "method": "POST",
+        "path": "/admin/guilds/delete"
+      },
+      "delete_single_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/delete-single-message",
+        "method": "POST",
+        "path": "/admin/messages/delete"
+      },
+      "delete_snowflake_reservation": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/delete-snowflake-reservation",
+        "method": "POST",
+        "path": "/admin/snowflake-reservations/delete"
+      },
+      "delete_user_webauthn_credential": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/delete-user-webauthn-credential",
+        "method": "POST",
+        "path": "/admin/users/delete-webauthn-credential"
+      },
+      "delete_voice_region": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/delete-voice-region",
+        "method": "POST",
+        "path": "/admin/voice/regions/delete"
+      },
+      "delete_voice_server": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/delete-voice-server",
+        "method": "POST",
+        "path": "/admin/voice/servers/delete"
+      },
+      "disable_user_for_suspicious_activity": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/disable-user-for-suspicious-activity",
+        "method": "POST",
+        "path": "/admin/users/disable-suspicious"
+      },
+      "disable_user_mfa": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/disable-user-mfa",
+        "method": "POST",
+        "path": "/admin/users/disable-mfa"
+      },
+      "expand_visionary_slots": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/expand-visionary-slots",
+        "method": "POST",
+        "path": "/admin/visionary-slots/expand"
+      },
+      "force_add_user_to_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/force-add-user-to-guild",
+        "method": "POST",
+        "path": "/admin/guilds/force-add-user"
+      },
+      "generate_gift_subscription_codes": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/generate-gift-subscription-codes",
+        "method": "POST",
+        "path": "/admin/codes/gift"
+      },
+      "get_archive_details": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-archive-details",
+        "method": "GET",
+        "path": "/admin/archives/{subjectType}/{subjectId}/{archiveId}"
+      },
+      "get_archive_download_url": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-archive-download-url",
+        "method": "GET",
+        "path": "/admin/archives/{subjectType}/{subjectId}/{archiveId}/download"
+      },
+      "get_authenticated_admin_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-authenticated-admin-user",
+        "method": "GET",
+        "path": "/admin/users/me"
+      },
+      "get_gateway_node_statistics": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-gateway-node-statistics",
+        "method": "GET",
+        "path": "/admin/gateway/stats"
+      },
+      "get_guild_memory_statistics": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-guild-memory-statistics",
+        "method": "POST",
+        "path": "/admin/gateway/memory-stats"
+      },
+      "get_instance_configuration": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-instance-configuration",
+        "method": "POST",
+        "path": "/admin/instance-config/get"
+      },
+      "get_legal_hold_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-legal-hold-status",
+        "method": "GET",
+        "path": "/admin/reports/{report_id}/legal-hold"
+      },
+      "get_limit_configuration": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-limit-configuration",
+        "method": "POST",
+        "path": "/admin/limit-config/get"
+      },
+      "get_message_shred_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-message-shred-status",
+        "method": "POST",
+        "path": "/admin/messages/shred-status"
+      },
+      "get_ncmec_submission_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-ncmec-submission-status",
+        "method": "GET",
+        "path": "/admin/reports/{report_id}/ncmec-status"
+      },
+      "get_report_details": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-report-details",
+        "method": "GET",
+        "path": "/admin/reports/{report_id}"
+      },
+      "get_search_index_refresh_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-search-index-refresh-status",
+        "method": "POST",
+        "path": "/admin/search/refresh-status"
+      },
+      "get_user_change_log": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-user-change-log",
+        "method": "POST",
+        "path": "/admin/users/change-log"
+      },
+      "get_voice_region": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-voice-region",
+        "method": "POST",
+        "path": "/admin/voice/regions/get"
+      },
+      "get_voice_server": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/get-voice-server",
+        "method": "POST",
+        "path": "/admin/voice/servers/get"
+      },
+      "kick_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/kick-guild-member",
+        "method": "POST",
+        "path": "/admin/guilds/kick-member"
+      },
+      "list_admin_api_keys": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-admin-api-keys",
+        "method": "GET",
+        "path": "/admin/api-keys"
+      },
+      "list_all_visionary_slots": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-all-visionary-slots",
+        "method": "GET",
+        "path": "/admin/visionary-slots"
+      },
+      "list_archives": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-archives",
+        "method": "POST",
+        "path": "/admin/archives/list"
+      },
+      "list_audit_logs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-audit-logs",
+        "method": "POST",
+        "path": "/admin/audit-logs"
+      },
+      "list_discovery_applications": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-discovery-applications",
+        "method": "GET",
+        "path": "/admin/discovery/applications"
+      },
+      "list_email_bans": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-email-bans",
+        "method": "POST",
+        "path": "/admin/bans/email/list"
+      },
+      "list_guild_emojis": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-guild-emojis",
+        "method": "GET",
+        "path": "/admin/guilds/{guild_id}/emojis"
+      },
+      "list_guild_members": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-guild-members",
+        "method": "POST",
+        "path": "/admin/guilds/list-members"
+      },
+      "list_guild_stickers": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-guild-stickers",
+        "method": "GET",
+        "path": "/admin/guilds/{guild_id}/stickers"
+      },
+      "list_ip_bans": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-ip-bans",
+        "method": "POST",
+        "path": "/admin/bans/ip/list"
+      },
+      "list_phone_bans": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-phone-bans",
+        "method": "POST",
+        "path": "/admin/bans/phone/list"
+      },
+      "list_reports": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-reports",
+        "method": "POST",
+        "path": "/admin/reports/list"
+      },
+      "list_snowflake_reservations": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-snowflake-reservations",
+        "method": "POST",
+        "path": "/admin/snowflake-reservations/list"
+      },
+      "list_system_dm_jobs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-system-dm-jobs",
+        "method": "GET",
+        "path": "/admin/system-dm-jobs"
+      },
+      "list_user_dm_channels": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-user-dm-channels",
+        "method": "POST",
+        "path": "/admin/users/list-dm-channels"
+      },
+      "list_user_guilds": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-user-guilds",
+        "method": "POST",
+        "path": "/admin/users/list-guilds"
+      },
+      "list_user_sessions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-user-sessions",
+        "method": "POST",
+        "path": "/admin/users/list-sessions"
+      },
+      "list_user_webauthn_credentials": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-user-webauthn-credentials",
+        "method": "POST",
+        "path": "/admin/users/list-webauthn-credentials"
+      },
+      "list_voice_regions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-voice-regions",
+        "method": "POST",
+        "path": "/admin/voice/regions/list"
+      },
+      "list_voice_servers": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/list-voice-servers",
+        "method": "POST",
+        "path": "/admin/voice/servers/list"
+      },
+      "look_up_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/look-up-guild",
+        "method": "POST",
+        "path": "/admin/guilds/lookup"
+      },
+      "look_up_message_by_attachment": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/look-up-message-by-attachment",
+        "method": "POST",
+        "path": "/admin/messages/lookup-by-attachment"
+      },
+      "look_up_message_details": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/look-up-message-details",
+        "method": "POST",
+        "path": "/admin/messages/lookup"
+      },
+      "lookup_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/lookup-user",
+        "method": "POST",
+        "path": "/admin/users/lookup"
+      },
+      "purge_guild_assets": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/purge-guild-assets",
+        "method": "POST",
+        "path": "/admin/assets/purge"
+      },
+      "queue_message_shred_operation": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/queue-message-shred-operation",
+        "method": "POST",
+        "path": "/admin/messages/shred"
+      },
+      "refresh_search_index": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/refresh-search-index",
+        "method": "POST",
+        "path": "/admin/search/refresh-index"
+      },
+      "reject_discovery_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/reject-discovery-application",
+        "method": "POST",
+        "path": "/admin/discovery/applications/{guild_id}/reject"
+      },
+      "release_legal_hold_on_evidence": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/release-legal-hold-on-evidence",
+        "method": "DELETE",
+        "path": "/admin/reports/{report_id}/legal-hold"
+      },
+      "reload_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/reload-guild",
+        "method": "POST",
+        "path": "/admin/guilds/reload"
+      },
+      "reload_specified_guilds": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/reload-specified-guilds",
+        "method": "POST",
+        "path": "/admin/gateway/reload-all"
+      },
+      "remove_email_ban": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/remove-email-ban",
+        "method": "POST",
+        "path": "/admin/bans/email/remove"
+      },
+      "remove_guild_from_discovery": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/remove-guild-from-discovery",
+        "method": "POST",
+        "path": "/admin/discovery/guilds/{guild_id}/remove"
+      },
+      "remove_ip_ban": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/remove-ip-ban",
+        "method": "POST",
+        "path": "/admin/bans/ip/remove"
+      },
+      "remove_phone_ban": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/remove-phone-ban",
+        "method": "POST",
+        "path": "/admin/bans/phone/remove"
+      },
+      "resend_verification_email": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/resend-verification-email",
+        "method": "POST",
+        "path": "/admin/users/resend-verification-email"
+      },
+      "reserve_or_unreserve_a_visionary_slot": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/reserve-or-unreserve-a-visionary-slot",
+        "method": "POST",
+        "path": "/admin/visionary-slots/reserve"
+      },
+      "resolve_report": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/resolve-report",
+        "method": "POST",
+        "path": "/admin/reports/resolve"
+      },
+      "schedule_account_deletion": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/schedule-account-deletion",
+        "method": "POST",
+        "path": "/admin/users/schedule-deletion"
+      },
+      "schedule_bulk_user_deletion": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/schedule-bulk-user-deletion",
+        "method": "POST",
+        "path": "/admin/bulk/schedule-user-deletion"
+      },
+      "search_audit_logs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/search-audit-logs",
+        "method": "POST",
+        "path": "/admin/audit-logs/search"
+      },
+      "search_guilds": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/search-guilds",
+        "method": "POST",
+        "path": "/admin/guilds/search"
+      },
+      "search_reports": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/search-reports",
+        "method": "POST",
+        "path": "/admin/reports/search"
+      },
+      "search_users": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/search-users",
+        "method": "POST",
+        "path": "/admin/users/search"
+      },
+      "send_password_reset": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/send-password-reset",
+        "method": "POST",
+        "path": "/admin/users/send-password-reset"
+      },
+      "set_legal_hold_on_evidence": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/set-legal-hold-on-evidence",
+        "method": "POST",
+        "path": "/admin/reports/{report_id}/legal-hold"
+      },
+      "set_user_acls": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/set-user-acls",
+        "method": "POST",
+        "path": "/admin/users/set-acls"
+      },
+      "set_user_bot_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/set-user-bot-status",
+        "method": "POST",
+        "path": "/admin/users/set-bot-status"
+      },
+      "set_user_system_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/set-user-system-status",
+        "method": "POST",
+        "path": "/admin/users/set-system-status"
+      },
+      "set_user_traits": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/set-user-traits",
+        "method": "POST",
+        "path": "/admin/users/set-traits"
+      },
+      "shrink_visionary_slots": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/shrink-visionary-slots",
+        "method": "POST",
+        "path": "/admin/visionary-slots/shrink"
+      },
+      "shutdown_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/shutdown-guild",
+        "method": "POST",
+        "path": "/admin/guilds/shutdown"
+      },
+      "submit_report_to_ncmec": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/submit-report-to-ncmec",
+        "method": "POST",
+        "path": "/admin/reports/{report_id}/ncmec-submit"
+      },
+      "swap_visionary_slot_reservations": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/swap-visionary-slot-reservations",
+        "method": "POST",
+        "path": "/admin/visionary-slots/swap"
+      },
+      "temp_ban_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/temp-ban-user",
+        "method": "POST",
+        "path": "/admin/users/temp-ban"
+      },
+      "terminate_user_sessions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/terminate-user-sessions",
+        "method": "POST",
+        "path": "/admin/users/terminate-sessions"
+      },
+      "transfer_guild_ownership": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/transfer-guild-ownership",
+        "method": "POST",
+        "path": "/admin/guilds/transfer-ownership"
+      },
+      "trigger_guild_archive": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/trigger-guild-archive",
+        "method": "POST",
+        "path": "/admin/archives/guild"
+      },
+      "trigger_user_archive": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/trigger-user-archive",
+        "method": "POST",
+        "path": "/admin/archives/user"
+      },
+      "unban_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/unban-user",
+        "method": "POST",
+        "path": "/admin/users/unban"
+      },
+      "unlink_user_phone": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/unlink-user-phone",
+        "method": "POST",
+        "path": "/admin/users/unlink-phone"
+      },
+      "update_guild_features": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-guild-features",
+        "method": "POST",
+        "path": "/admin/guilds/update-features"
+      },
+      "update_guild_name": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-guild-name",
+        "method": "POST",
+        "path": "/admin/guilds/update-name"
+      },
+      "update_guild_settings": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-guild-settings",
+        "method": "POST",
+        "path": "/admin/guilds/update-settings"
+      },
+      "update_guild_vanity": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-guild-vanity",
+        "method": "POST",
+        "path": "/admin/guilds/update-vanity"
+      },
+      "update_instance_configuration": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-instance-configuration",
+        "method": "POST",
+        "path": "/admin/instance-config/update"
+      },
+      "update_limit_configuration": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-limit-configuration",
+        "method": "POST",
+        "path": "/admin/limit-config/update"
+      },
+      "update_suspicious_activity_flags": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-suspicious-activity-flags",
+        "method": "POST",
+        "path": "/admin/users/update-suspicious-activity-flags"
+      },
+      "update_user_flags": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-user-flags",
+        "method": "POST",
+        "path": "/admin/users/update-flags"
+      },
+      "update_voice_region": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-voice-region",
+        "method": "POST",
+        "path": "/admin/voice/regions/update"
+      },
+      "update_voice_server": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/update-voice-server",
+        "method": "POST",
+        "path": "/admin/voice/servers/update"
+      },
+      "verify_user_email": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/admin/verify-user-email",
+        "method": "POST",
+        "path": "/admin/users/verify-email"
+      }
+    },
+    "auth": {
+      "authenticate_with_webauthn": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/authenticate-with-webauthn",
+        "method": "POST",
+        "path": "/auth/webauthn/authenticate"
+      },
+      "authorize_ip_address": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/authorize-ip-address",
+        "method": "POST",
+        "path": "/auth/authorize-ip"
+      },
+      "cancel_handoff": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/cancel-handoff",
+        "method": "DELETE",
+        "path": "/auth/handoff/{code}"
+      },
+      "complete_handoff": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/complete-handoff",
+        "method": "POST",
+        "path": "/auth/handoff/complete"
+      },
+      "complete_sso": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/complete-sso",
+        "method": "POST",
+        "path": "/auth/sso/complete"
+      },
+      "forgot_password": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/forgot-password",
+        "method": "POST",
+        "path": "/auth/forgot"
+      },
+      "get_handoff_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/get-handoff-status",
+        "method": "GET",
+        "path": "/auth/handoff/{code}/status"
+      },
+      "get_sso_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/get-sso-status",
+        "method": "GET",
+        "path": "/auth/sso/status"
+      },
+      "get_username_suggestions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/get-username-suggestions",
+        "method": "POST",
+        "path": "/auth/username-suggestions"
+      },
+      "get_webauthn_authentication_options": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/get-webauthn-authentication-options",
+        "method": "POST",
+        "path": "/auth/webauthn/authentication-options"
+      },
+      "get_webauthn_mfa_options": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/get-webauthn-mfa-options",
+        "method": "POST",
+        "path": "/auth/login/mfa/webauthn/authentication-options"
+      },
+      "initiate_handoff": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/initiate-handoff",
+        "method": "POST",
+        "path": "/auth/handoff/initiate"
+      },
+      "list_auth_sessions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/list-auth-sessions",
+        "method": "GET",
+        "path": "/auth/sessions"
+      },
+      "login_account": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/login-account",
+        "method": "POST",
+        "path": "/auth/login"
+      },
+      "login_with_sms_mfa": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/login-with-sms-mfa",
+        "method": "POST",
+        "path": "/auth/login/mfa/sms"
+      },
+      "login_with_totp": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/login-with-totp",
+        "method": "POST",
+        "path": "/auth/login/mfa/totp"
+      },
+      "login_with_webauthn_mfa": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/login-with-webauthn-mfa",
+        "method": "POST",
+        "path": "/auth/login/mfa/webauthn"
+      },
+      "logout_account": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/logout-account",
+        "method": "POST",
+        "path": "/auth/logout"
+      },
+      "logout_all_sessions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/logout-all-sessions",
+        "method": "POST",
+        "path": "/auth/sessions/logout"
+      },
+      "poll_ip_authorization": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/poll-ip-authorization",
+        "method": "GET",
+        "path": "/auth/ip-authorization/poll"
+      },
+      "register_account": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/register-account",
+        "method": "POST",
+        "path": "/auth/register"
+      },
+      "resend_ip_authorization": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/resend-ip-authorization",
+        "method": "POST",
+        "path": "/auth/ip-authorization/resend"
+      },
+      "resend_verification_email": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/resend-verification-email",
+        "method": "POST",
+        "path": "/auth/verify/resend"
+      },
+      "reset_password": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/reset-password",
+        "method": "POST",
+        "path": "/auth/reset"
+      },
+      "revert_email_change": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/revert-email-change",
+        "method": "POST",
+        "path": "/auth/email-revert"
+      },
+      "send_sms_mfa_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/send-sms-mfa-code",
+        "method": "POST",
+        "path": "/auth/login/mfa/sms/send"
+      },
+      "start_sso": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/start-sso",
+        "method": "POST",
+        "path": "/auth/sso/start"
+      },
+      "verify_email": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/auth/verify-email",
+        "method": "POST",
+        "path": "/auth/verify"
+      }
+    },
+    "billing": {
+      "create_checkout_session": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/billing/create-checkout-session",
+        "method": "POST",
+        "path": "/stripe/checkout/subscription"
+      },
+      "create_gift_checkout_session": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/billing/create-gift-checkout-session",
+        "method": "POST",
+        "path": "/stripe/checkout/gift"
+      },
+      "process_stripe_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/billing/process-stripe-webhook",
+        "method": "POST",
+        "path": "/stripe/webhook"
+      }
+    },
+    "channels": {
+      "acknowledge_a_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/acknowledge-a-message",
+        "method": "POST",
+        "path": "/channels/{channel_id}/messages/{message_id}/ack"
+      },
+      "acknowledge_new_pin_notifications": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/acknowledge-new-pin-notifications",
+        "method": "POST",
+        "path": "/channels/{channel_id}/pins/ack"
+      },
+      "add_reaction_to_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/add-reaction-to-message",
+        "method": "PUT",
+        "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}/@me"
+      },
+      "add_recipient_to_group_dm": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/add-recipient-to-group-dm",
+        "method": "PUT",
+        "path": "/channels/{channel_id}/recipients/{user_id}"
+      },
+      "bulk_delete_messages": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/bulk-delete-messages",
+        "method": "POST",
+        "path": "/channels/{channel_id}/messages/bulk-delete"
+      },
+      "clear_channel_read_state": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/clear-channel-read-state",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/messages/ack"
+      },
+      "delete_a_channel": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/delete-a-channel",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}"
+      },
+      "delete_a_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/delete-a-message",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/messages/{message_id}"
+      },
+      "delete_a_message_attachment": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/delete-a-message-attachment",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/messages/{message_id}/attachments/{attachment_id}"
+      },
+      "delete_permission_overwrite": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/delete-permission-overwrite",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/permissions/{overwrite_id}"
+      },
+      "edit_a_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/edit-a-message",
+        "method": "PATCH",
+        "path": "/channels/{channel_id}/messages/{message_id}"
+      },
+      "end_call_session": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/end-call-session",
+        "method": "POST",
+        "path": "/channels/{channel_id}/call/end"
+      },
+      "fetch_a_channel": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/fetch-a-channel",
+        "method": "GET",
+        "path": "/channels/{channel_id}"
+      },
+      "fetch_a_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/fetch-a-message",
+        "method": "GET",
+        "path": "/channels/{channel_id}/messages/{message_id}"
+      },
+      "get_call_eligibility_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/get-call-eligibility-status",
+        "method": "GET",
+        "path": "/channels/{channel_id}/call"
+      },
+      "get_stream_preview_image": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/get-stream-preview-image",
+        "method": "GET",
+        "path": "/streams/{stream_key}/preview"
+      },
+      "indicate_typing_activity": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/indicate-typing-activity",
+        "method": "POST",
+        "path": "/channels/{channel_id}/typing"
+      },
+      "list_messages_in_a_channel": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/list-messages-in-a-channel",
+        "method": "GET",
+        "path": "/channels/{channel_id}/messages"
+      },
+      "list_pinned_messages": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/list-pinned-messages",
+        "method": "GET",
+        "path": "/channels/{channel_id}/messages/pins"
+      },
+      "list_rtc_regions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/list-rtc-regions",
+        "method": "GET",
+        "path": "/channels/{channel_id}/rtc-regions"
+      },
+      "list_users_who_reacted_with_emoji": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/list-users-who-reacted-with-emoji",
+        "method": "GET",
+        "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}"
+      },
+      "pin_a_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/pin-a-message",
+        "method": "PUT",
+        "path": "/channels/{channel_id}/pins/{message_id}"
+      },
+      "remove_all_reactions_from_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/remove-all-reactions-from-message",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/messages/{message_id}/reactions"
+      },
+      "remove_all_reactions_with_emoji": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/remove-all-reactions-with-emoji",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}"
+      },
+      "remove_own_reaction_from_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/remove-own-reaction-from-message",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}/@me"
+      },
+      "remove_reaction_from_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/remove-reaction-from-message",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}/{target_id}"
+      },
+      "remove_recipient_from_group_dm": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/remove-recipient-from-group-dm",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/recipients/{user_id}"
+      },
+      "ring_call_recipients": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/ring-call-recipients",
+        "method": "POST",
+        "path": "/channels/{channel_id}/call/ring"
+      },
+      "schedule_a_message_to_send_later": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/schedule-a-message-to-send-later",
+        "method": "POST",
+        "path": "/channels/{channel_id}/messages/schedule"
+      },
+      "send_a_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/send-a-message",
+        "method": "POST",
+        "path": "/channels/{channel_id}/messages"
+      },
+      "set_permission_overwrite_for_channel": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/set-permission-overwrite-for-channel",
+        "method": "PUT",
+        "path": "/channels/{channel_id}/permissions/{overwrite_id}"
+      },
+      "stop_ringing_call_recipients": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/stop-ringing-call-recipients",
+        "method": "POST",
+        "path": "/channels/{channel_id}/call/stop-ringing"
+      },
+      "unpin_a_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/unpin-a-message",
+        "method": "DELETE",
+        "path": "/channels/{channel_id}/pins/{message_id}"
+      },
+      "update_call_region": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/update-call-region",
+        "method": "PATCH",
+        "path": "/channels/{channel_id}/call"
+      },
+      "update_channel_settings": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/update-channel-settings",
+        "method": "PATCH",
+        "path": "/channels/{channel_id}"
+      },
+      "update_stream_region": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/update-stream-region",
+        "method": "PATCH",
+        "path": "/streams/{stream_key}/stream"
+      },
+      "upload_stream_preview_image": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/channels/upload-stream-preview-image",
+        "method": "POST",
+        "path": "/streams/{stream_key}/preview"
+      }
+    },
+    "connections": {
+      "delete_connection": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/connections/delete-connection",
+        "method": "DELETE",
+        "path": "/users/@me/connections/{type}/{connection_id}"
+      },
+      "initiate_connection": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/connections/initiate-connection",
+        "method": "POST",
+        "path": "/users/@me/connections"
+      },
+      "list_user_connections": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/connections/list-user-connections",
+        "method": "GET",
+        "path": "/users/@me/connections"
+      },
+      "reorder_connections": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/connections/reorder-connections",
+        "method": "PATCH",
+        "path": "/users/@me/connections/reorder"
+      },
+      "start_bluesky_oauth_flow": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/connections/start-bluesky-oauth-flow",
+        "method": "POST",
+        "path": "/users/@me/connections/bluesky/authorize"
+      },
+      "update_connection": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/connections/update-connection",
+        "method": "PATCH",
+        "path": "/users/@me/connections/{type}/{connection_id}"
+      },
+      "verify_and_create_connection": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/connections/verify-and-create-connection",
+        "method": "POST",
+        "path": "/users/@me/connections/verify"
+      },
+      "verify_connection": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/connections/verify-connection",
+        "method": "POST",
+        "path": "/users/@me/connections/{type}/{connection_id}/verify"
+      }
+    },
+    "discovery": {
+      "apply_for_guild_discovery": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/discovery/apply-for-guild-discovery",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/discovery"
+      },
+      "edit_discovery_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/discovery/edit-discovery-application",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/discovery"
+      },
+      "get_discovery_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/discovery/get-discovery-status",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/discovery"
+      },
+      "join_a_discoverable_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/discovery/join-a-discoverable-guild",
+        "method": "POST",
+        "path": "/discovery/guilds/{guild_id}/join"
+      },
+      "list_discovery_categories": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/discovery/list-discovery-categories",
+        "method": "GET",
+        "path": "/discovery/categories"
+      },
+      "search_discoverable_guilds": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/discovery/search-discoverable-guilds",
+        "method": "GET",
+        "path": "/discovery/guilds"
+      },
+      "withdraw_discovery_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/discovery/withdraw-discovery-application",
+        "method": "DELETE",
+        "path": "/guilds/{guild_id}/discovery"
+      }
+    },
+    "donations": {
+      "create_donation_checkout_session": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/donations/create-donation-checkout-session",
+        "method": "POST",
+        "path": "/donations/checkout"
+      },
+      "manage_donation_subscription": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/donations/manage-donation-subscription",
+        "method": "GET",
+        "path": "/donations/manage"
+      },
+      "request_donation_management_link": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/donations/request-donation-management-link",
+        "method": "POST",
+        "path": "/donations/request-link"
+      }
+    },
+    "gateway": {
+      "get_gateway_information": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/gateway/get-gateway-information",
+        "method": "GET",
+        "path": "/gateway/bot"
+      }
+    },
+    "gifts": {
+      "get_gift_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/gifts/get-gift-code",
+        "method": "GET",
+        "path": "/gifts/{code}"
+      },
+      "redeem_gift_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/gifts/redeem-gift-code",
+        "method": "POST",
+        "path": "/gifts/{code}/redeem"
+      }
+    },
+    "guilds": {
+      "add_role_to_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/add-role-to-guild-member",
+        "method": "PUT",
+        "path": "/guilds/{guild_id}/members/{user_id}/roles/{role_id}"
+      },
+      "ban_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/ban-guild-member",
+        "method": "PUT",
+        "path": "/guilds/{guild_id}/bans/{user_id}"
+      },
+      "bulk_create_guild_emojis": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/bulk-create-guild-emojis",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/emojis/bulk"
+      },
+      "bulk_create_guild_stickers": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/bulk-create-guild-stickers",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/stickers/bulk"
+      },
+      "create_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/create-guild",
+        "method": "POST",
+        "path": "/guilds"
+      },
+      "create_guild_channel": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/create-guild-channel",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/channels"
+      },
+      "create_guild_emoji": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/create-guild-emoji",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/emojis"
+      },
+      "create_guild_role": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/create-guild-role",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/roles"
+      },
+      "create_guild_sticker": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/create-guild-sticker",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/stickers"
+      },
+      "delete_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/delete-guild",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/delete"
+      },
+      "delete_guild_emoji": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/delete-guild-emoji",
+        "method": "DELETE",
+        "path": "/guilds/{guild_id}/emojis/{emoji_id}"
+      },
+      "delete_guild_role": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/delete-guild-role",
+        "method": "DELETE",
+        "path": "/guilds/{guild_id}/roles/{role_id}"
+      },
+      "delete_guild_sticker": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/delete-guild-sticker",
+        "method": "DELETE",
+        "path": "/guilds/{guild_id}/stickers/{sticker_id}"
+      },
+      "get_current_user_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/get-current-user-guild-member",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/members/@me"
+      },
+      "get_guild_information": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/get-guild-information",
+        "method": "GET",
+        "path": "/guilds/{guild_id}"
+      },
+      "get_guild_member_by_user_id": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/get-guild-member-by-user-id",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/members/{user_id}"
+      },
+      "get_guild_vanity_url": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/get-guild-vanity-url",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/vanity-url"
+      },
+      "leave_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/leave-guild",
+        "method": "DELETE",
+        "path": "/users/@me/guilds/{guild_id}"
+      },
+      "list_current_user_guilds": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/list-current-user-guilds",
+        "method": "GET",
+        "path": "/users/@me/guilds"
+      },
+      "list_guild_audit_logs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/list-guild-audit-logs",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/audit-logs"
+      },
+      "list_guild_bans": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/list-guild-bans",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/bans"
+      },
+      "list_guild_channels": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/list-guild-channels",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/channels"
+      },
+      "list_guild_emojis": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/list-guild-emojis",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/emojis"
+      },
+      "list_guild_members": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/list-guild-members",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/members"
+      },
+      "list_guild_roles": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/list-guild-roles",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/roles"
+      },
+      "list_guild_stickers": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/list-guild-stickers",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/stickers"
+      },
+      "remove_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/remove-guild-member",
+        "method": "DELETE",
+        "path": "/guilds/{guild_id}/members/{user_id}"
+      },
+      "remove_role_from_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/remove-role-from-guild-member",
+        "method": "DELETE",
+        "path": "/guilds/{guild_id}/members/{user_id}/roles/{role_id}"
+      },
+      "reset_role_hoist_positions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/reset-role-hoist-positions",
+        "method": "DELETE",
+        "path": "/guilds/{guild_id}/roles/hoist-positions"
+      },
+      "search_guild_members": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/search-guild-members",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/members-search"
+      },
+      "toggle_detached_banner": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/toggle-detached-banner",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/detached-banner"
+      },
+      "toggle_text_channel_flexible_names": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/toggle-text-channel-flexible-names",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/text-channel-flexible-names"
+      },
+      "transfer_guild_ownership": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/transfer-guild-ownership",
+        "method": "POST",
+        "path": "/guilds/{guild_id}/transfer-ownership"
+      },
+      "unban_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/unban-guild-member",
+        "method": "DELETE",
+        "path": "/guilds/{guild_id}/bans/{user_id}"
+      },
+      "update_channel_positions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-channel-positions",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/channels"
+      },
+      "update_current_user_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-current-user-guild-member",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/members/@me"
+      },
+      "update_guild_emoji": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-guild-emoji",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/emojis/{emoji_id}"
+      },
+      "update_guild_member": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-guild-member",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/members/{user_id}"
+      },
+      "update_guild_role": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-guild-role",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/roles/{role_id}"
+      },
+      "update_guild_settings": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-guild-settings",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}"
+      },
+      "update_guild_sticker": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-guild-sticker",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/stickers/{sticker_id}"
+      },
+      "update_guild_vanity_url": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-guild-vanity-url",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/vanity-url"
+      },
+      "update_role_hoist_positions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-role-hoist-positions",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/roles/hoist-positions"
+      },
+      "update_role_positions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/guilds/update-role-positions",
+        "method": "PATCH",
+        "path": "/guilds/{guild_id}/roles"
+      }
+    },
+    "health": {
+      "health_check": {
+        "base_url": "https://relay.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/health/health-check",
+        "method": "GET",
+        "path": "/_health"
+      }
+    },
+    "images": {
+      "get_user_or_guild_avatar": {
+        "base_url": "https://fluxerusercontent.com",
+        "docs_url": "https://docs.fluxer.app/api-reference/images/get-user-or-guild-avatar",
+        "method": "GET",
+        "path": "/avatars/{id}/{filename}"
+      }
+    },
+    "instance": {
+      "get_instance_discovery_document": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/instance/get-instance-discovery-document",
+        "method": "GET",
+        "path": "/.well-known/fluxer"
+      }
+    },
+    "invites": {
+      "accept_invite": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/invites/accept-invite",
+        "method": "POST",
+        "path": "/invites/{invite_code}"
+      },
+      "create_channel_invite": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/invites/create-channel-invite",
+        "method": "POST",
+        "path": "/channels/{channel_id}/invites"
+      },
+      "create_pack_invite": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/invites/create-pack-invite",
+        "method": "POST",
+        "path": "/packs/{pack_id}/invites"
+      },
+      "delete_invite": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/invites/delete-invite",
+        "method": "DELETE",
+        "path": "/invites/{invite_code}"
+      },
+      "get_invite_information": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/invites/get-invite-information",
+        "method": "GET",
+        "path": "/invites/{invite_code}"
+      },
+      "list_channel_invites": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/invites/list-channel-invites",
+        "method": "GET",
+        "path": "/channels/{channel_id}/invites"
+      },
+      "list_guild_invites": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/invites/list-guild-invites",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/invites"
+      },
+      "list_pack_invites": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/invites/list-pack-invites",
+        "method": "GET",
+        "path": "/packs/{pack_id}/invites"
+      }
+    },
+    "klipy": {
+      "get_featured_klipy_gifs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/klipy/get-featured-klipy-gifs",
+        "method": "GET",
+        "path": "/klipy/featured"
+      },
+      "get_klipy_search_suggestions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/klipy/get-klipy-search-suggestions",
+        "method": "GET",
+        "path": "/klipy/suggest"
+      },
+      "get_trending_klipy_gifs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/klipy/get-trending-klipy-gifs",
+        "method": "GET",
+        "path": "/klipy/trending-gifs"
+      },
+      "register_klipy_gif_share": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/klipy/register-klipy-gif-share",
+        "method": "POST",
+        "path": "/klipy/register-share"
+      },
+      "search_klipy_gifs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/klipy/search-klipy-gifs",
+        "method": "GET",
+        "path": "/klipy/search"
+      }
+    },
+    "oauth2": {
+      "create_oauth2_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/create-oauth2-application",
+        "method": "POST",
+        "path": "/oauth2/applications"
+      },
+      "delete_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/delete-application",
+        "method": "DELETE",
+        "path": "/oauth2/applications/{id}"
+      },
+      "exchange_oauth2_token": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/exchange-oauth2-token",
+        "method": "POST",
+        "path": "/oauth2/token"
+      },
+      "get_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/get-application",
+        "method": "GET",
+        "path": "/oauth2/applications/{id}"
+      },
+      "get_current_oauth2_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/get-current-oauth2-user",
+        "method": "GET",
+        "path": "/oauth2/@me"
+      },
+      "get_oauth2_user_information": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/get-oauth2-user-information",
+        "method": "GET",
+        "path": "/oauth2/userinfo"
+      },
+      "get_public_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/get-public-application",
+        "method": "GET",
+        "path": "/oauth2/applications/{id}/public"
+      },
+      "grant_oauth2_consent": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/grant-oauth2-consent",
+        "method": "POST",
+        "path": "/oauth2/authorize/consent"
+      },
+      "introspect_oauth2_token": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/introspect-oauth2-token",
+        "method": "POST",
+        "path": "/oauth2/introspect"
+      },
+      "list_current_user_applications": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/list-current-user-applications",
+        "method": "GET",
+        "path": "/applications/@me"
+      },
+      "list_user_applications": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/list-user-applications",
+        "method": "GET",
+        "path": "/oauth2/applications/@me"
+      },
+      "list_user_applications_1": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/list-user-applications-1",
+        "method": "GET",
+        "path": "/users/@me/applications"
+      },
+      "list_user_oauth2_authorizations": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/list-user-oauth2-authorizations",
+        "method": "GET",
+        "path": "/oauth2/@me/authorizations"
+      },
+      "reset_bot_token": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/reset-bot-token",
+        "method": "POST",
+        "path": "/oauth2/applications/{id}/bot/reset-token"
+      },
+      "reset_client_secret": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/reset-client-secret",
+        "method": "POST",
+        "path": "/oauth2/applications/{id}/client-secret/reset"
+      },
+      "revoke_oauth2_authorization": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/revoke-oauth2-authorization",
+        "method": "DELETE",
+        "path": "/oauth2/@me/authorizations/{applicationId}"
+      },
+      "revoke_oauth2_token": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/revoke-oauth2-token",
+        "method": "POST",
+        "path": "/oauth2/token/revoke"
+      },
+      "update_application": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/update-application",
+        "method": "PATCH",
+        "path": "/oauth2/applications/{id}"
+      },
+      "update_bot_profile": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/oauth2/update-bot-profile",
+        "method": "PATCH",
+        "path": "/oauth2/applications/{id}/bot"
+      }
+    },
+    "packs": {
+      "bulk_create_pack_emojis": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/bulk-create-pack-emojis",
+        "method": "POST",
+        "path": "/packs/emojis/{pack_id}/bulk"
+      },
+      "bulk_create_pack_stickers": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/bulk-create-pack-stickers",
+        "method": "POST",
+        "path": "/packs/stickers/{pack_id}/bulk"
+      },
+      "create_pack": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/create-pack",
+        "method": "POST",
+        "path": "/packs/{pack_type}"
+      },
+      "create_pack_emoji": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/create-pack-emoji",
+        "method": "POST",
+        "path": "/packs/emojis/{pack_id}"
+      },
+      "create_pack_sticker": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/create-pack-sticker",
+        "method": "POST",
+        "path": "/packs/stickers/{pack_id}"
+      },
+      "delete_pack": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/delete-pack",
+        "method": "DELETE",
+        "path": "/packs/{pack_id}"
+      },
+      "delete_pack_emoji": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/delete-pack-emoji",
+        "method": "DELETE",
+        "path": "/packs/emojis/{pack_id}/{emoji_id}"
+      },
+      "delete_pack_sticker": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/delete-pack-sticker",
+        "method": "DELETE",
+        "path": "/packs/stickers/{pack_id}/{sticker_id}"
+      },
+      "install_pack": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/install-pack",
+        "method": "POST",
+        "path": "/packs/{pack_id}/install"
+      },
+      "list_pack_emojis": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/list-pack-emojis",
+        "method": "GET",
+        "path": "/packs/emojis/{pack_id}"
+      },
+      "list_pack_stickers": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/list-pack-stickers",
+        "method": "GET",
+        "path": "/packs/stickers/{pack_id}"
+      },
+      "list_user_packs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/list-user-packs",
+        "method": "GET",
+        "path": "/packs"
+      },
+      "uninstall_pack": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/uninstall-pack",
+        "method": "DELETE",
+        "path": "/packs/{pack_id}/install"
+      },
+      "update_pack": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/update-pack",
+        "method": "PATCH",
+        "path": "/packs/{pack_id}"
+      },
+      "update_pack_emoji": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/update-pack-emoji",
+        "method": "PATCH",
+        "path": "/packs/emojis/{pack_id}/{emoji_id}"
+      },
+      "update_pack_sticker": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/packs/update-pack-sticker",
+        "method": "PATCH",
+        "path": "/packs/stickers/{pack_id}/{sticker_id}"
+      }
+    },
+    "premium": {
+      "cancel_subscription": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/premium/cancel-subscription",
+        "method": "POST",
+        "path": "/premium/cancel-subscription"
+      },
+      "create_customer_portal": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/premium/create-customer-portal",
+        "method": "POST",
+        "path": "/premium/customer-portal"
+      },
+      "get_stripe_price_ids": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/premium/get-stripe-price-ids",
+        "method": "GET",
+        "path": "/premium/price-ids"
+      },
+      "reactivate_subscription": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/premium/reactivate-subscription",
+        "method": "POST",
+        "path": "/premium/reactivate-subscription"
+      },
+      "rejoin_operator_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/premium/rejoin-operator-guild",
+        "method": "POST",
+        "path": "/premium/operator/rejoin"
+      },
+      "rejoin_visionary_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/premium/rejoin-visionary-guild",
+        "method": "POST",
+        "path": "/premium/visionary/rejoin"
+      }
+    },
+    "read-states": {
+      "mark_channels_as_read": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/read-states/mark-channels-as-read",
+        "method": "POST",
+        "path": "/read-states/ack-bulk"
+      }
+    },
+    "reports": {
+      "create_dsa_report": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/reports/create-dsa-report",
+        "method": "POST",
+        "path": "/reports/dsa"
+      },
+      "report_guild": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/reports/report-guild",
+        "method": "POST",
+        "path": "/reports/guild"
+      },
+      "report_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/reports/report-message",
+        "method": "POST",
+        "path": "/reports/message"
+      },
+      "report_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/reports/report-user",
+        "method": "POST",
+        "path": "/reports/user"
+      },
+      "send_dsa_report_email": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/reports/send-dsa-report-email",
+        "method": "POST",
+        "path": "/reports/dsa/email/send"
+      },
+      "verify_dsa_report_email": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/reports/verify-dsa-report-email",
+        "method": "POST",
+        "path": "/reports/dsa/email/verify"
+      }
+    },
+    "saved-media": {
+      "create_meme_from_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/saved-media/create-meme-from-message",
+        "method": "POST",
+        "path": "/channels/{channel_id}/messages/{message_id}/memes"
+      },
+      "create_meme_from_url": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/saved-media/create-meme-from-url",
+        "method": "POST",
+        "path": "/users/@me/memes"
+      },
+      "delete_favorite_meme": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/saved-media/delete-favorite-meme",
+        "method": "DELETE",
+        "path": "/users/@me/memes/{meme_id}"
+      },
+      "get_favorite_meme": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/saved-media/get-favorite-meme",
+        "method": "GET",
+        "path": "/users/@me/memes/{meme_id}"
+      },
+      "list_favorite_memes": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/saved-media/list-favorite-memes",
+        "method": "GET",
+        "path": "/users/@me/memes"
+      },
+      "update_favorite_meme": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/saved-media/update-favorite-meme",
+        "method": "PATCH",
+        "path": "/users/@me/memes/{meme_id}"
+      }
+    },
+    "search": {
+      "search_messages": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/search/search-messages",
+        "method": "POST",
+        "path": "/search/messages"
+      }
+    },
+    "tenor": {
+      "get_featured_tenor_gifs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/tenor/get-featured-tenor-gifs",
+        "method": "GET",
+        "path": "/tenor/featured"
+      },
+      "get_tenor_search_suggestions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/tenor/get-tenor-search-suggestions",
+        "method": "GET",
+        "path": "/tenor/suggest"
+      },
+      "get_trending_tenor_gifs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/tenor/get-trending-tenor-gifs",
+        "method": "GET",
+        "path": "/tenor/trending-gifs"
+      },
+      "register_tenor_gif_share": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/tenor/register-tenor-gif-share",
+        "method": "POST",
+        "path": "/tenor/register-share"
+      },
+      "search_tenor_gifs": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/tenor/search-tenor-gifs",
+        "method": "GET",
+        "path": "/tenor/search"
+      }
+    },
+    "themes": {
+      "create_theme": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/themes/create-theme",
+        "method": "POST",
+        "path": "/users/@me/themes"
+      }
+    },
+    "users": {
+      "accept_or_update_friend_request": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/accept-or-update-friend-request",
+        "method": "PUT",
+        "path": "/users/@me/relationships/{user_id}"
+      },
+      "add_phone_number_to_account": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/add-phone-number-to-account",
+        "method": "POST",
+        "path": "/users/@me/phone"
+      },
+      "cancel_bulk_message_deletion": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/cancel-bulk-message-deletion",
+        "method": "DELETE",
+        "path": "/users/@me/messages/delete"
+      },
+      "cancel_scheduled_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/cancel-scheduled-message",
+        "method": "DELETE",
+        "path": "/users/@me/scheduled-messages/{scheduled_message_id}"
+      },
+      "check_username_tag_availability": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/check-username-tag-availability",
+        "method": "GET",
+        "path": "/users/check-tag"
+      },
+      "complete_password_change": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/complete-password-change",
+        "method": "POST",
+        "path": "/users/@me/password-change/complete"
+      },
+      "create_private_channel": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/create-private-channel",
+        "method": "POST",
+        "path": "/users/@me/channels"
+      },
+      "delete_current_user_account": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/delete-current-user-account",
+        "method": "POST",
+        "path": "/users/@me/delete"
+      },
+      "delete_mention": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/delete-mention",
+        "method": "DELETE",
+        "path": "/users/@me/mentions/{message_id}"
+      },
+      "delete_webauthn_credential": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/delete-webauthn-credential",
+        "method": "DELETE",
+        "path": "/users/@me/mfa/webauthn/credentials/{credential_id}"
+      },
+      "disable_current_user_account": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/disable-current-user-account",
+        "method": "POST",
+        "path": "/users/@me/disable"
+      },
+      "disable_sms_multi_factor_authentication": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/disable-sms-multi-factor-authentication",
+        "method": "POST",
+        "path": "/users/@me/mfa/sms/disable"
+      },
+      "disable_totp_multi_factor_authentication": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/disable-totp-multi-factor-authentication",
+        "method": "POST",
+        "path": "/users/@me/mfa/totp/disable"
+      },
+      "enable_sms_multi_factor_authentication": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/enable-sms-multi-factor-authentication",
+        "method": "POST",
+        "path": "/users/@me/mfa/sms/enable"
+      },
+      "enable_totp_multi_factor_authentication": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/enable-totp-multi-factor-authentication",
+        "method": "POST",
+        "path": "/users/@me/mfa/totp/enable"
+      },
+      "forget_authorized_ips_for_current_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/forget-authorized-ips-for-current-user",
+        "method": "DELETE",
+        "path": "/users/@me/authorized-ips"
+      },
+      "get_backup_codes_for_multi_factor_authentication": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-backup-codes-for-multi-factor-authentication",
+        "method": "POST",
+        "path": "/users/@me/mfa/backup-codes"
+      },
+      "get_current_user_profile": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-current-user-profile",
+        "method": "GET",
+        "path": "/users/@me"
+      },
+      "get_current_user_settings": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-current-user-settings",
+        "method": "GET",
+        "path": "/users/@me/settings"
+      },
+      "get_data_harvest_download_url": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-data-harvest-download-url",
+        "method": "GET",
+        "path": "/users/@me/harvest/{harvestId}/download"
+      },
+      "get_data_harvest_status": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-data-harvest-status",
+        "method": "GET",
+        "path": "/users/@me/harvest/{harvestId}"
+      },
+      "get_latest_data_harvest": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-latest-data-harvest",
+        "method": "GET",
+        "path": "/users/@me/harvest/latest"
+      },
+      "get_note_on_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-note-on-user",
+        "method": "GET",
+        "path": "/users/@me/notes/{target_id}"
+      },
+      "get_scheduled_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-scheduled-message",
+        "method": "GET",
+        "path": "/users/@me/scheduled-messages/{scheduled_message_id}"
+      },
+      "get_sudo_webauthn_authentication_options": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-sudo-webauthn-authentication-options",
+        "method": "POST",
+        "path": "/users/@me/sudo/webauthn/authentication-options"
+      },
+      "get_user_by_id": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-user-by-id",
+        "method": "GET",
+        "path": "/users/{user_id}"
+      },
+      "get_user_profile": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-user-profile",
+        "method": "GET",
+        "path": "/users/{target_id}/profile"
+      },
+      "get_webauthn_registration_options": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/get-webauthn-registration-options",
+        "method": "POST",
+        "path": "/users/@me/mfa/webauthn/credentials/registration-options"
+      },
+      "list_current_user_notes": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-current-user-notes",
+        "method": "GET",
+        "path": "/users/@me/notes"
+      },
+      "list_mentions_for_current_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-mentions-for-current-user",
+        "method": "GET",
+        "path": "/users/@me/mentions"
+      },
+      "list_private_channels": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-private-channels",
+        "method": "GET",
+        "path": "/users/@me/channels"
+      },
+      "list_push_subscriptions": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-push-subscriptions",
+        "method": "GET",
+        "path": "/users/@me/push/subscriptions"
+      },
+      "list_saved_messages": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-saved-messages",
+        "method": "GET",
+        "path": "/users/@me/saved-messages"
+      },
+      "list_scheduled_messages": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-scheduled-messages",
+        "method": "GET",
+        "path": "/users/@me/scheduled-messages"
+      },
+      "list_sudo_multi_factor_authentication_methods": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-sudo-multi-factor-authentication-methods",
+        "method": "GET",
+        "path": "/users/@me/sudo/mfa-methods"
+      },
+      "list_user_gifts": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-user-gifts",
+        "method": "GET",
+        "path": "/users/@me/gifts"
+      },
+      "list_user_relationships": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-user-relationships",
+        "method": "GET",
+        "path": "/users/@me/relationships"
+      },
+      "list_webauthn_credentials": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/list-webauthn-credentials",
+        "method": "GET",
+        "path": "/users/@me/mfa/webauthn/credentials"
+      },
+      "pin_direct_message_channel": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/pin-direct-message-channel",
+        "method": "PUT",
+        "path": "/users/@me/channels/{channel_id}/pin"
+      },
+      "preload_messages_for_channels": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/preload-messages-for-channels",
+        "method": "POST",
+        "path": "/users/@me/preload-messages"
+      },
+      "preload_messages_for_channels_alternative": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/preload-messages-for-channels-alternative",
+        "method": "POST",
+        "path": "/users/@me/channels/messages/preload"
+      },
+      "register_webauthn_credential": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/register-webauthn-credential",
+        "method": "POST",
+        "path": "/users/@me/mfa/webauthn/credentials"
+      },
+      "remove_phone_number_from_account": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/remove-phone-number-from-account",
+        "method": "DELETE",
+        "path": "/users/@me/phone"
+      },
+      "remove_relationship": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/remove-relationship",
+        "method": "DELETE",
+        "path": "/users/@me/relationships/{user_id}"
+      },
+      "request_bulk_message_deletion": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/request-bulk-message-deletion",
+        "method": "POST",
+        "path": "/users/@me/messages/delete"
+      },
+      "request_data_harvest": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/request-data-harvest",
+        "method": "POST",
+        "path": "/users/@me/harvest"
+      },
+      "request_new_email_address": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/request-new-email-address",
+        "method": "POST",
+        "path": "/users/@me/email-change/request-new"
+      },
+      "request_replacement_email_for_bounced_address": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/request-replacement-email-for-bounced-address",
+        "method": "POST",
+        "path": "/users/@me/email-change/bounced/request-new"
+      },
+      "resend_new_email_confirmation": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/resend-new-email-confirmation",
+        "method": "POST",
+        "path": "/users/@me/email-change/resend-new"
+      },
+      "resend_original_email_confirmation": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/resend-original-email-confirmation",
+        "method": "POST",
+        "path": "/users/@me/email-change/resend-original"
+      },
+      "resend_password_change_verification_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/resend-password-change-verification-code",
+        "method": "POST",
+        "path": "/users/@me/password-change/resend"
+      },
+      "resend_replacement_email_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/resend-replacement-email-code",
+        "method": "POST",
+        "path": "/users/@me/email-change/bounced/resend-new"
+      },
+      "reset_current_user_premium_state": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/reset-current-user-premium-state",
+        "method": "POST",
+        "path": "/users/@me/premium/reset"
+      },
+      "save_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/save-message",
+        "method": "POST",
+        "path": "/users/@me/saved-messages"
+      },
+      "send_friend_request": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/send-friend-request",
+        "method": "POST",
+        "path": "/users/@me/relationships/{user_id}"
+      },
+      "send_friend_request_by_tag": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/send-friend-request-by-tag",
+        "method": "POST",
+        "path": "/users/@me/relationships"
+      },
+      "send_phone_verification_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/send-phone-verification-code",
+        "method": "POST",
+        "path": "/users/@me/phone/send-verification"
+      },
+      "send_sudo_sms_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/send-sudo-sms-code",
+        "method": "POST",
+        "path": "/users/@me/sudo/mfa/sms/send"
+      },
+      "set_note_on_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/set-note-on-user",
+        "method": "PUT",
+        "path": "/users/@me/notes/{target_id}"
+      },
+      "start_email_change": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/start-email-change",
+        "method": "POST",
+        "path": "/users/@me/email-change/start"
+      },
+      "start_password_change": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/start-password-change",
+        "method": "POST",
+        "path": "/users/@me/password-change/start"
+      },
+      "subscribe_to_push_notifications": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/subscribe-to-push-notifications",
+        "method": "POST",
+        "path": "/users/@me/push/subscribe"
+      },
+      "test_bulk_message_deletion": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/test-bulk-message-deletion",
+        "method": "POST",
+        "path": "/users/@me/messages/delete/test"
+      },
+      "unpin_direct_message_channel": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/unpin-direct-message-channel",
+        "method": "DELETE",
+        "path": "/users/@me/channels/{channel_id}/pin"
+      },
+      "unsave_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/unsave-message",
+        "method": "DELETE",
+        "path": "/users/@me/saved-messages/{message_id}"
+      },
+      "unsubscribe_from_push_notifications": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/unsubscribe-from-push-notifications",
+        "method": "DELETE",
+        "path": "/users/@me/push/subscriptions/{subscription_id}"
+      },
+      "update_current_user_profile": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/update-current-user-profile",
+        "method": "PATCH",
+        "path": "/users/@me"
+      },
+      "update_current_user_settings": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/update-current-user-settings",
+        "method": "PATCH",
+        "path": "/users/@me/settings"
+      },
+      "update_dm_notification_settings": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/update-dm-notification-settings",
+        "method": "PATCH",
+        "path": "/users/@me/guilds/@me/settings"
+      },
+      "update_guild_settings_for_user": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/update-guild-settings-for-user",
+        "method": "PATCH",
+        "path": "/users/@me/guilds/{guild_id}/settings"
+      },
+      "update_relationship_nickname": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/update-relationship-nickname",
+        "method": "PATCH",
+        "path": "/users/@me/relationships/{user_id}"
+      },
+      "update_scheduled_message": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/update-scheduled-message",
+        "method": "PATCH",
+        "path": "/users/@me/scheduled-messages/{scheduled_message_id}"
+      },
+      "update_webauthn_credential": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/update-webauthn-credential",
+        "method": "PATCH",
+        "path": "/users/@me/mfa/webauthn/credentials/{credential_id}"
+      },
+      "verify_new_email_address": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/verify-new-email-address",
+        "method": "POST",
+        "path": "/users/@me/email-change/verify-new"
+      },
+      "verify_original_email_address": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/verify-original-email-address",
+        "method": "POST",
+        "path": "/users/@me/email-change/verify-original"
+      },
+      "verify_password_change_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/verify-password-change-code",
+        "method": "POST",
+        "path": "/users/@me/password-change/verify"
+      },
+      "verify_phone_code": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/verify-phone-code",
+        "method": "POST",
+        "path": "/users/@me/phone/verify"
+      },
+      "verify_replacement_email_for_bounced_address": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/users/verify-replacement-email-for-bounced-address",
+        "method": "POST",
+        "path": "/users/@me/email-change/bounced/verify-new"
+      }
+    },
+    "webhooks": {
+      "create_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/create-webhook",
+        "method": "POST",
+        "path": "/channels/{channel_id}/webhooks"
+      },
+      "delete_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/delete-webhook",
+        "method": "DELETE",
+        "path": "/webhooks/{webhook_id}"
+      },
+      "delete_webhook_with_token": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/delete-webhook-with-token",
+        "method": "DELETE",
+        "path": "/webhooks/{webhook_id}/{token}"
+      },
+      "execute_github_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/execute-github-webhook",
+        "method": "POST",
+        "path": "/webhooks/{webhook_id}/{token}/github"
+      },
+      "execute_sentry_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/execute-sentry-webhook",
+        "method": "POST",
+        "path": "/webhooks/{webhook_id}/{token}/sentry"
+      },
+      "execute_slack_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/execute-slack-webhook",
+        "method": "POST",
+        "path": "/webhooks/{webhook_id}/{token}/slack"
+      },
+      "execute_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/execute-webhook",
+        "method": "POST",
+        "path": "/webhooks/{webhook_id}/{token}"
+      },
+      "get_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/get-webhook",
+        "method": "GET",
+        "path": "/webhooks/{webhook_id}"
+      },
+      "get_webhook_with_token": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/get-webhook-with-token",
+        "method": "GET",
+        "path": "/webhooks/{webhook_id}/{token}"
+      },
+      "list_channel_webhooks": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/list-channel-webhooks",
+        "method": "GET",
+        "path": "/channels/{channel_id}/webhooks"
+      },
+      "list_guild_webhooks": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/list-guild-webhooks",
+        "method": "GET",
+        "path": "/guilds/{guild_id}/webhooks"
+      },
+      "update_webhook": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/update-webhook",
+        "method": "PATCH",
+        "path": "/webhooks/{webhook_id}"
+      },
+      "update_webhook_with_token": {
+        "base_url": "https://api.fluxer.app",
+        "docs_url": "https://docs.fluxer.app/api-reference/webhooks/update-webhook-with-token",
+        "method": "PATCH",
+        "path": "/webhooks/{webhook_id}/{token}"
+      }
+    }
+  }
+}
