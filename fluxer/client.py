@@ -1,5 +1,6 @@
 import asyncio
 import inspect
+import logging
 import platform
 from collections import OrderedDict
 from typing import Any, Awaitable, Callable, Dict, Optional
@@ -33,6 +34,7 @@ from .rest import REST
 
 
 EventHandler = Callable[..., Awaitable[None]]
+LOGGER = logging.getLogger("fluxer")
 
 
 class Client:
@@ -180,6 +182,8 @@ class Client:
 
     async def _handle_ready(self, _: str, data: Any) -> None:
         self._set_user(data.get("user"))
+        if self.user:
+            LOGGER.info("Logged in as %s (%s)", self.user, self.user.id)
         await self._dispatch("on_ready")
         await self._dispatch("on_ready_raw", data)
 
@@ -426,6 +430,7 @@ class Client:
         if not self.token:
             raise FluxerError("Token is required to start the client")
 
+        LOGGER.info("Starting Fluxer client")
         await self.http.start()
         try:
             await self.gateway.connect()
@@ -440,11 +445,13 @@ class Client:
         try:
             asyncio.run(self.start(token))
         except KeyboardInterrupt:
+            LOGGER.info("Received KeyboardInterrupt, shutting down")
             try:
                 asyncio.run(self.close())
             except Exception:
                 pass
 
     async def close(self) -> None:
+        LOGGER.info("Closing Fluxer client")
         await self.gateway.close()
         await self.http.close()

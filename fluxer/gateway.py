@@ -1,10 +1,14 @@
 ﻿import asyncio
 import json
+import logging
 from typing import Any, Dict, Optional
 
 import aiohttp
 
 from .errors import GatewayError
+
+
+LOGGER = logging.getLogger("fluxer")
 
 
 class Gateway:
@@ -24,6 +28,7 @@ class Gateway:
         if not url:
             raise GatewayError("Gateway URL missing from /gateway/bot response")
 
+        LOGGER.info("Connecting to gateway %s", url)
         self._ws = await self._client.http.session.ws_connect(url)
         self._listener_task = asyncio.create_task(self._listen())
         try:
@@ -93,14 +98,17 @@ class Gateway:
             if event == "READY":
                 self._session_id = data.get("session_id")
                 self._client._set_user(data.get("user"))
+                LOGGER.info("Gateway READY (session_id=%s)", self._session_id)
                 if not self._ready.is_set():
                     self._ready.set()
                 await self._client._dispatch_gateway_event(event, data)
                 return
             await self._client._dispatch_gateway_event(event, data)
         elif op == 7:  # RECONNECT
+            LOGGER.info("Gateway requested reconnect")
             await self._reconnect()
         elif op == 9:  # INVALID_SESSION
+            LOGGER.warning("Gateway invalid session; re-identifying")
             await asyncio.sleep(5)
             await self._identify()
 
